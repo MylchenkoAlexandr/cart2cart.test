@@ -1,8 +1,11 @@
 import * as Pages from "../constants/pages";
-import { MyMigrations, Sign, Wizard } from "../../components/pages";
+import {MyMigrations, Sign, Wizard} from "../../components/pages";
 
-export default {
+const all = {
     [ Pages.SIGN ]: Sign,
     [ Pages.MY_MIGRATIONS ]: MyMigrations,
     [ Pages.WIZARD ]: Wizard
 }
+
+
+export default all ;

@@ -1,2 +1,3 @@
-import MyMigrations from "./MyMigrations" ;
+import MyMigrations from "./MyMigrations";
+
 export default MyMigrations ;

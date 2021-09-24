@@ -1,1 +1,15 @@
-body { margin: 0 }
+body {
+  font-family: $font-family-a ;
+  font-size: $font-size-a;
+
+  margin: 0 ;
+}
+
+ul {
+  list-style: none;
+  margin: 0 ;
+}
+
+a {
+  text-decoration: none
+}

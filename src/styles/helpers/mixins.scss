@@ -1,0 +1,27 @@
+@mixin setFlex( $flex-direction: column, $justify-content: flex-start, $align-items: flex-start ) {
+  display: flex ;
+  flex-direction: $flex-direction ;
+  justify-content: $justify-content ;
+  align-items: $align-items ;
+}
+@mixin disableTextSelection() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@mixin setScreenWidth( $width ) {
+  @media only screen and ( max-width: $width ) {
+    @content;
+  }
+}
+@mixin disableLineBreaks() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@mixin debug() {
+  border: 1px dashed $color-red !important;
+}
