@@ -1,21 +1,21 @@
 import React from "react";
-import imgHeaderLogo from "../../static/images/header-logo.png";
+import {PHONE_NUMBER, WORK_TIME} from "../../models/constants/common";
+import Section from "../section";
 
-export default function Header( props ) {
+export default function Header() {
     return (
-        <div className="Header">
+        <Section className="Header">
             <a href="/" className="logo">
-                <img alt="logo" src={ imgHeaderLogo }/>
+                <img alt="logo" src="/static/images/header-logo.png"/>
             </a>
             <ul className="contacts">
                 <li>
-                    24/7
+                    {WORK_TIME}
                     <span className="separator">|</span>
-                    <span className="phone">1-800-224-1462</span>
-
+                    <span className="phone">{PHONE_NUMBER}</span>
                 </li>
                 <li>US & Canada Toll Free</li>
             </ul>
-        </div>
+        </Section>
     );
 }

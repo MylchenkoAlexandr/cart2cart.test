@@ -1,6 +1,8 @@
 .Section {
   @include setFlex( column, flex-start, center );
+  width: 100% ;
   &> .wrapper {
+    //@include debug();
     display: flex ;
     max-width: $screen-width-a ;
     width: 100%;

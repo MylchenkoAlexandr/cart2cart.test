@@ -23,5 +23,19 @@
   text-overflow: ellipsis;
 }
 @mixin debug() {
-  border: 1px dashed $color-red !important;
+  outline: 1px dashed red !important;
+}
+@mixin buttonStyleA( $color, $background, $border, $colorHover, $backgroundHover, $borderHover, $fontSize: $font-size-a ) {
+  padding: 8px 24px;
+  color: $color;
+  font-size: $fontSize;
+  background-color: $background;
+  border: 1px solid $border;
+  border-radius: 100px;
+  &:not([disabled]) {cursor: pointer}
+  &:hover {
+    color: $colorHover;
+    background-color: $backgroundHover;
+    border: 1px solid $borderHover;
+  }
 }

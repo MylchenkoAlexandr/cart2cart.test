@@ -1,8 +1,9 @@
 import React from "react";
+import classnames from "classnames";
 
-export default function Section({children}) {
+export default function Section({children, className}) {
     return (
-        <div className="Section">
+        <div className={classnames( "Section", className )}>
             <div className="wrapper">
                 {children}
             </div>

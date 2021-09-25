@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 import * as Pages from "../../models/constants/pages";
 
 export default function Application( props ) {
-    /* debug */ console.log( "Application([ props ])", props );
     return (
         <ul className="Application">
             <li>

@@ -1,0 +1,44 @@
+.Header {
+  &> .wrapper {
+    @include setFlex( row, space-between, center ) ;
+    height: 97px ;
+    &> .logo {
+      display: flex ;
+      padding-left: 15px;
+    }
+    &> .contacts {
+      @include setFlex( column, center, flex-end ) ;
+      margin-right: 2.20em;
+      padding: 0 ;
+      &> li {
+        font-family: $font-family-b ;
+        &:first-child {
+          font-size: 1.4em;
+          font-weight: 300;
+          &> .separator {
+            margin: 0 7px;
+          }
+          &> .phone {
+            position: relative ;
+            padding-left: 1.3em;
+            &:after {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 2px;
+              background: url(/static/images/header-contact-phone.png) no-repeat;
+              width: 24px;
+              height: 30px;
+            }
+          }
+        }
+        &:last-child {
+          color: #AFAFAF;
+          font-weight: 300;
+          font-size: 13px;
+          line-height: 13px ;
+        }
+      }
+    }
+  }
+}
