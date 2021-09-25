@@ -1,28 +1,21 @@
 .HomeFooter {
   background-color: $color-blue-dark-a;
-
   & > .wrapper {
     padding-top: 36px;
     margin-bottom: 24px;
     flex-wrap: nowrap;
-
     & > .column {
       @include setFlex(column, flex-start, flex-start);
       width: calc(100% / 4);
       overflow: hidden;
 
-      a, p {
-        color: $color-blue-light-b
-      }
+      a, p { color: $color-blue-light-b }
       a {
         @include disableLineBreaks() ;
         font-size: 1em;
         font-family: $font-family-a;
         font-weight: normal;
-
-        &:hover {
-          color: $color-blue-a
-        }
+        &:hover { color: $color-blue-a }
       }
       li { margin-bottom: .5em }
       h3 {
@@ -34,7 +27,6 @@
 
       .social {
         @include setFlex(row, flex-start, center);
-
         .fa-icon {
           @include setFlex(row, center, center);
           text-decoration: none;
@@ -46,36 +38,64 @@
           color: $color-white-a;
           text-align: center;
         }
-
         .fa-icon.facebook {
           background: #6a9ce1;
-
-          &:hover {
-            background: #558edd
-          }
+          &:hover {background: #558edd}
         }
-
         .fa-icon.twitter {
           background: #6fb8f1;
-
-          &:hover {
-            background: #58adef
-          }
+          &:hover {background: #58adef}
         }
-
         .fa-icon.youtube {
           background: #e9594d;
-
-          &:hover {
-            background: #e64436
-          }
+          &:hover {background: #e64436 }
         }
       }
-      .phone {
-        font-size: 1.6em
+      .phone-line > p {
+        line-height: 38px;
+        margin-bottom: -6px;
       }
-      .mail {
-        font-size: 0.875em
+      .phone { font-size: 1.6em }
+      .mail { font-size: 0.875em }
+    }
+  }
+}
+
+@include setScreenWidth(800px) {
+  .HomeFooter {
+    & > .wrapper {
+      flex-wrap: wrap;
+      & > .column {
+        width: calc(100% / 2) ;
+        &:nth-child(3),
+        &:nth-child(4) { padding-top: 36px }
+        .phone {
+          padding-left: 1px ;
+          font-size: 16px;
+        }
+        .phone-line > p {
+          padding-top: 9px;
+          line-height: 26px;
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+@include setScreenWidth(438px) {
+  .HomeFooter {
+    & > .wrapper {
+      & > .column {
+        width: 100%;
+        &:nth-child(3),
+        &:nth-child(4) { padding-top: 0 }
+        h3, ul, li { width: 100% }
+
+        h3, li { text-align: center }
+        .social {
+          justify-content: center;
+        }
       }
     }
   }

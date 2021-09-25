@@ -36,7 +36,6 @@
       &> .social {
         padding-top: 1.5em;
         padding-left: 6.3em;
-
         .button.swipe {
           width: 16.5em ;
           font-size: 16px;
@@ -45,6 +44,51 @@
             @include buttonStyleB(tomato);
             margin-top: 17px;
           }
+        }
+      }
+    }
+  }
+}
+
+@include setScreenWidth(990px) {
+  .SignIn {
+    &> .wrapper {
+      &> div:last-child {
+        &> .social {
+          padding-left: 1em;
+          .button.swipe {width: 100% }
+        }
+      }
+    }
+  }
+}
+
+@include setScreenWidth(640px) {
+  .SignIn {
+    &> .wrapper {
+      width: 100%;
+      flex-wrap: wrap;
+      &> div { width: 100% }
+      &> div:last-child {
+        &> .social {
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .button.swipe { width: 16.5em }
+        }
+      }
+      .buttons { padding: 0 }
+    }
+  }
+}
+
+@include setScreenWidth(335px) {
+  .SignIn {
+    &> .wrapper {
+      &> div:last-child {
+        &> .social {
+          .button.swipe { width: 100% }
         }
       }
     }

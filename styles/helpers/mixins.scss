@@ -58,6 +58,7 @@
     width: 2.2em;
   }
   &> .text {
+    @include disableLineBreaks();
     display: inline;
     text-align: center;
     width: 100% ;

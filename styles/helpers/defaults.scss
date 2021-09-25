@@ -12,6 +12,7 @@ ul {
   margin: 0 ;
 }
 a { text-decoration: none }
+p { margin: 0 ; padding: 0 }
 
 /** [!] fix: antd styles overrides */
 svg:not(:root) {overflow: visible!important}

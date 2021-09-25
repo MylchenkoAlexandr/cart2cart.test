@@ -3,10 +3,7 @@
   &> .wrapper {
     @include setFlex( row, space-between, center ) ;
     height: 100px ;
-    &> .logo {
-      display: flex ;
-      //  padding-left: 15px;
-    }
+    &> .logo {display: flex }
     &> .contacts {
       @include setFlex( column, center, flex-end ) ;
       margin-right: 2.20em;
@@ -16,9 +13,7 @@
         &:first-child {
           font-size: 1.4em;
           font-weight: 300;
-          &> .separator {
-            margin: 0 7px;
-          }
+          &> .separator {margin: 0 7px}
           &> .phone {
             position: relative ;
             padding-left: 1.3em;
@@ -39,6 +34,16 @@
           font-size: 13px;
           line-height: 13px ;
         }
+      }
+    }
+  }
+}
+
+@include setScreenWidth(600px) {
+  .Header {
+    &> .wrapper {
+      &> .contacts {
+        display: none;
       }
     }
   }

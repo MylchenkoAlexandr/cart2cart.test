@@ -5,13 +5,18 @@
   padding: 16px 0;
   &> .wrapper {
     @include setFlex(row, space-between, center );
-    small {
-      font-size: 76%;
-    }
+    small {font-size: 76%}
     small, a {color: #556f88}
     small { width: calc(100% / 4)}
-    small:last-child {
-      font-size: 66% ;
+    small:last-child {font-size: 66%}
+  }
+}
+
+@include setScreenWidth(800px) {
+  .Copyright {
+    &> .wrapper {
+      @include setFlex(column, center, center );
+      small {width: 100%; text-align: center}
     }
   }
 }

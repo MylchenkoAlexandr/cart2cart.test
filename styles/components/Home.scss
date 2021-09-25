@@ -7,7 +7,5 @@
     @include setFlex(column, flex-start, center );
     width: 100% ;
   }
-  &> .content {
-    flex: 1 ;
-  }
+  &> .content {flex: 1 }
 }

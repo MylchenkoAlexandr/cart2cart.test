@@ -1,15 +1,12 @@
 .HomeMenu {
   @include setFlex(row, center, center);
   background-color: $color-blue-a;
-
   & > .wrapper {
     justify-content: space-between;
     height: 80px;
-
     & > div {
       @include setFlex(row, center, center);
       height: 100%;
-
       & > a {
         @include setFlex(row, center, center);
         @include disableLineBreaks() ;
@@ -23,8 +20,6 @@
       }
     }
     & > .left {
-      //padding-left: 15px;
-
       & > a:hover {background-color: $color-blue-light-a}
       .IconHome {
         width: 1.3em;

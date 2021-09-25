@@ -3,7 +3,7 @@ import Section from "../section";
 import {map, reject, isNil} from "lodash";
 
 const bootstrap = (header="", data=[]) => {
-    const items = reject(map(data, ({ title="", url="", children=null }, key ) => {
+    const items = reject(map(data, ({ title="", url="", children=null, className="" }, key ) => {
 
         let item ;
         if( url ) {
@@ -13,7 +13,7 @@ const bootstrap = (header="", data=[]) => {
         }
 
         return (
-            <li key={ key }>
+            <li key={ key } className={ className }>
                 { item }
                 { children }
             </li>
@@ -64,8 +64,8 @@ export default function HomeFooter() {
                             <a href="/" className="fa-icon youtube"/>
                         </div>
                     )},
-                { title: <>Toll-Free<span className="phone">1-800-224-1462</span></> },
-                { title: <span className="mail">contact@shopping-cart-migration.com</span> },
+                { className: "phone-line", title: <>Toll-Free<span className="phone">1-800-224-1462</span></> },
+                { className: "email-line", title: <span className="mail">contact@shopping-cart-migration.com</span> },
             ]) }
         </Section>
     );
