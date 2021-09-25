@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 @font-face {
   font-family: "FontAwesome" ;
   src: url(/static/fonts/fontawesome-webfont.ttf);
   font-weight: normal;
   font-style: normal;
   font-display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .fa-icon.facebook {
@@ -20,4 +19,54 @@
 .fa-icon.youtube {
   font-family: $font-family-d !important;
   &:before {content: "\f167"}
+}
+.fa-icon.google {
+  font-family: $font-family-d !important;
+  &:before {content: "\f1a0"}
+}
+
+@font-face {
+  font-family: "Hind" ;
+  src: url(/static/fonts/hind.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: "Open Sans" ;
+  src: url(/static/fonts/open-sans.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: "Roboto" ;
+  src: url(/static/fonts/roboto.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: "Roboto" ;
+  src: url(/static/fonts/roboto.ttf);
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: "Roboto" ;
+  src: url(/static/fonts/roboto-bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

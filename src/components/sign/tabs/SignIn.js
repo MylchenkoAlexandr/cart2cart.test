@@ -21,6 +21,17 @@ export default function SignIn() {
                 </div>
                 <div className="buttons">
 
+                    <div className="social">
+                        <div className="button swipe facebook">
+                            <p className="fa-icon facebook"/>
+                            <span className="text">Sign in with Facebook</span>
+                        </div>
+                        <div className="button swipe google">
+                            <p className="fa-icon google"/>
+                            <span className="text">Sign in with Google</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

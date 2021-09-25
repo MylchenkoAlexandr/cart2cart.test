@@ -7,6 +7,7 @@
   margin-bottom: 1em ;
   width: 100% ;
   &> .wrapper {
+    display: flex ;
     max-width: 54em;
     width: 100% ;
     &> div {
@@ -22,10 +23,27 @@
         font-size: $font-size-a ;
       }
       &> .Button {
-        @include buttonStyleA( $color-white-a, $color-green-a, $color-green-a, $color-white-a, $color-green-b, $color-green-b ) ;
+        @include buttonStyleA( $color-white-a, $color-green-a, $color-green-a, $color-white-a, $color-green-b, $color-green-b, 14px ) ;
         align-self: center;
         justify-self: center;
         text-transform: uppercase;
+        padding: 8px 29px !important;
+      }
+    }
+    &> div:last-child {
+      &> .social {
+        padding-top: 1.5em;
+        padding-left: 6.3em;
+
+        .button.swipe {
+          width: 16.5em ;
+          font-size: 16px;
+          &.facebook {@include buttonStyleB(#3B5998)}
+          &.google {
+            @include buttonStyleB(tomato);
+            margin-top: 17px;
+          }
+        }
       }
     }
   }
