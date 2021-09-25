@@ -5,7 +5,13 @@
   padding: 16px 0;
   &> .wrapper {
     @include setFlex(row, space-between, center );
+    small {
+      font-size: 76%;
+    }
     small, a {color: #556f88}
     small { width: calc(100% / 4)}
+    small:last-child {
+      font-size: 66% ;
+    }
   }
 }
