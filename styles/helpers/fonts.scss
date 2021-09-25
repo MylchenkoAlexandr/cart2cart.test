@@ -1,1 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@font-face {
+  font-family: "FontAwesome" ;
+  src: url(/static/fonts/fontawesome-webfont.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.fa-icon.facebook {
+  font-family: $font-family-d !important;
+  &:before {content: "\f09a"}
+}
+.fa-icon.twitter {
+  font-family: $font-family-d !important;
+  &:before {content: "\f099"}
+}
+.fa-icon.youtube {
+  font-family: $font-family-d !important;
+  &:before {content: "\f167"}
+}

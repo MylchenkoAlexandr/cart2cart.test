@@ -1,0 +1,84 @@
+.HomeFooter {
+  background-color: $color-blue-dark-a;
+
+  & > .wrapper {
+    padding-top: 36px;
+    margin-bottom: 24px;
+    width: 100%;
+    flex-wrap: nowrap;
+
+    & > .column {
+      @include setFlex(column, flex-start, flex-start);
+      width: calc(100% / 4);
+      overflow: hidden;
+
+      a, p {
+        color: $color-blue-light-b
+      }
+      a {
+        @include disableLineBreaks() ;
+        font-size: 1em;
+        font-family: $font-family-a;
+        font-weight: normal;
+
+        &:hover {
+          color: $color-blue-a
+        }
+      }
+      li {
+        margin-bottom: .9em
+      }
+      h3 {
+        font-size: 0.875em;
+        font-weight: 600;
+        color: $color-blue-b;
+      }
+
+      .social {
+        @include setFlex(row, flex-start, center);
+
+        .fa-icon {
+          @include setFlex(row, center, center);
+          text-decoration: none;
+          font-size: 1.8em;
+          margin: 10px 9px 10px 0;
+          width: 48px;
+          height: 48px;
+          border-radius: 3px;
+          color: $color-white-a;
+          text-align: center;
+        }
+
+        .fa-icon.facebook {
+          background: #6a9ce1;
+
+          &:hover {
+            background: #558edd
+          }
+        }
+
+        .fa-icon.twitter {
+          background: #6fb8f1;
+
+          &:hover {
+            background: #58adef
+          }
+        }
+
+        .fa-icon.youtube {
+          background: #e9594d;
+
+          &:hover {
+            background: #e64436
+          }
+        }
+      }
+      .phone {
+        font-size: 1.6em
+      }
+      .mail {
+        font-size: 0.875em
+      }
+    }
+  }
+}

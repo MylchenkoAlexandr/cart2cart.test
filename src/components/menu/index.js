@@ -1,3 +1,5 @@
 import HomeMenu from "./HomeMenu";
 
-export default HomeMenu ;
+export {
+    HomeMenu
+} ;
