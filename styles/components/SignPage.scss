@@ -1,0 +1,5 @@
+.SignPage {
+  @include setFlex(column, flex-start, center );
+  height: 100% ;
+  background-color: $color-white-b ;
+}

@@ -1,11 +1,11 @@
-import Wizard from "./Wizard";
-import Sign from "./Sign";
-import Home from "./Home";
-import MyMigrations from "./MyMigrations";
+import WizardPage from "./WizardPage";
+import SignPage from "./SignPage";
+import HomePage from "../../containers/HomePage";
+import MyMigrationsPage from "./MyMigrationsPage";
 
 export {
-    Home,
-    Wizard,
-    Sign,
-    MyMigrations
+    HomePage,
+    WizardPage,
+    SignPage,
+    MyMigrationsPage
 }

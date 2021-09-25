@@ -2,7 +2,7 @@ import React from "react";
 import Section from "../section";
 import Button from "../button";
 import {chain} from "lodash";
-import IconMenuSVG from "../../../static/images/icon-menu.svg";
+import IconHomeSvg from "../../../static/images/icon-menu.svg";
 
 const MenuItemsPositions = {
     Left: "left",
@@ -10,7 +10,7 @@ const MenuItemsPositions = {
 }
 
 const HomeMenuItems = [
-    {title: <IconMenuSVG className="IconHome"/>, url: "/", position: MenuItemsPositions.Left},
+    {title: <IconHomeSvg className="IconHome"/>, url: "/", position: MenuItemsPositions.Left},
     {title: "Supported Carts", url: "/", position: MenuItemsPositions.Left},
     {title: "Services", url: "/", position: MenuItemsPositions.Left},
     {title: "Contact Us", url: "/", position: MenuItemsPositions.Left},

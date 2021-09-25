@@ -1,11 +1,10 @@
 import * as Pages from "../constants/pages";
-import {MyMigrations, Sign, Wizard} from "../../components/pages";
+import {MyMigrationsPage, SignPage, WizardPage} from "../../components/pages";
 
 const all = {
-    [ Pages.SIGN ]: Sign,
-    [ Pages.MY_MIGRATIONS ]: MyMigrations,
-    [ Pages.WIZARD ]: Wizard
+    [ Pages.SIGN ]: SignPage,
+    [ Pages.MY_MIGRATIONS ]: MyMigrationsPage,
+    [ Pages.WIZARD ]: WizardPage
 }
-
 
 export default all ;

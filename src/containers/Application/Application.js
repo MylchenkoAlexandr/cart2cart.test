@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import * as Pages from "../../models/constants/pages";
 
-export default function Application( props ) {
+export default function Application() {
     return (
         <ul className="Application">
             <li>

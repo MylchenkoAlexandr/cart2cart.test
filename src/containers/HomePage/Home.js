@@ -1,8 +1,7 @@
 import React from "react";
-import Section from "../../section";
-import Header from "../../header";
-import {HomeMenu} from "../../menu";
-import Footers from "../../footer";
+import Header from "../../components/header";
+import {HomeMenu} from "../../components/menu";
+import Footers from "../../components/footer";
 
 export default function Home({children}) {
     return (
@@ -12,9 +11,7 @@ export default function Home({children}) {
                 <HomeMenu/>
             </div>
             <div className="content">
-                <Section>
-                    {children}
-                </Section>
+                {children}
             </div>
             <div className="bottom">
                 <Footers.HomeFooter/>

@@ -1,0 +1,49 @@
+.Sign {
+  @include setFlex(column, center, center );
+  &> .wrapper {
+    @include setFlex(column, center, center );
+    height: 100% ;
+    h1 {
+      text-transform: uppercase;
+      font-size: 24px;
+      padding-top: .9em ;
+      margin: 0 ;
+      margin-bottom: .7em;
+    }
+    .SignTabs {
+      width: 100% ;
+      .ant-tabs-nav {
+        margin: 0 ;
+        &:before {
+          content: '';
+          border-bottom: 1px solid $color-gray-a;
+        }
+      }
+      .ant-tabs-tab {
+        margin-right: 10px!important;
+        background: none;
+        border: 1px solid transparent;
+        padding: 7px 24px;
+        border-radius: 5px 5px 0 0 ;
+        &:hover:not(.ant-tabs-tab-active) {
+          background: #f2f4f5 ;
+          border-bottom: 1px solid $color-gray-a;
+        }
+      }
+      .ant-tabs-tab.ant-tabs-tab-active {
+        background-color: $color-white-a ;
+        border: 1px solid $color-gray-a;
+        border-bottom: 1px solid $color-white-a ;
+        .ant-tabs-tab-btn {
+          color: $color-red-a ;
+        }
+      }
+      .ant-tabs-tab-btn {
+        color: $color-blue-a ;
+        font-size: $font-size-a;
+        font-family: $font-family-a;
+      }
+
+    }
+  }
+}
