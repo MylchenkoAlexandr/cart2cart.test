@@ -22,19 +22,16 @@
         padding: 0 10px;
       }
     }
-
     & > .left {
-      padding-left: 15px;
+      //padding-left: 15px;
 
       & > a:hover {background-color: $color-blue-light-a}
-
       .IconHome {
         width: 1.3em;
         margin: 0 1em;
         fill: $color-white-a ;
       }
     }
-
     & > .right {
       padding-right: 25px;
       .Button {

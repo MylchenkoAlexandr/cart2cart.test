@@ -21,6 +21,7 @@
       .ant-checkbox-wrapper {
         padding-top: 2em;
         font-size: $font-size-a ;
+        margin-bottom: 1.6em;
       }
       &> .Button {
         @include buttonStyleA( $color-white-a, $color-green-a, $color-green-a, $color-white-a, $color-green-b, $color-green-b, 14px ) ;
@@ -28,6 +29,7 @@
         justify-self: center;
         text-transform: uppercase;
         padding: 8px 29px !important;
+        margin-bottom: 1em;
       }
     }
     &> div:last-child {

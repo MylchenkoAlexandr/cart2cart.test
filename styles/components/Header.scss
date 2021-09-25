@@ -5,7 +5,7 @@
     height: 100px ;
     &> .logo {
       display: flex ;
-      padding-left: 15px;
+      //  padding-left: 15px;
     }
     &> .contacts {
       @include setFlex( column, center, flex-end ) ;

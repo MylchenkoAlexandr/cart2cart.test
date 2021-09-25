@@ -16,11 +16,9 @@ export default function SignIn() {
                         <Input.Password  size="large" placeholder="Password" />
                     </div>
                     <Checkbox>Stay signed in</Checkbox>
-                    <br/>
                     <Button title="Sign in"/>
                 </div>
                 <div className="buttons">
-
                     <div className="social">
                         <div className="button swipe facebook">
                             <p className="fa-icon facebook"/>
@@ -31,7 +29,6 @@ export default function SignIn() {
                             <span className="text">Sign in with Google</span>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

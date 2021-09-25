@@ -25,13 +25,12 @@ export default function Sign({items = [...TabItems]}) {
     const [activeTab, setTab] = useState(first(items));
     const onTabChange = (id) => setTab(find(items, {id}));
 
-    /* debug */ console.log("Sign", activeTab);
-
     return (
         <Section className="Sign">
             <h1>{ activeTab.title }</h1>
-            <Tabs type="card" activeKey={activeTab.id} className="SignTabs" onChange={onTabChange}
-                  centered={true}>{tabs}</Tabs>
+            <Tabs type="card" activeKey={activeTab.id} className="SignTabs" onChange={onTabChange} centered={true}>
+                {tabs}
+            </Tabs>
         </Section>
     );
 }
