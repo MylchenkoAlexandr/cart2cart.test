@@ -20,7 +20,7 @@
         }
       }
       .ant-tabs-tab {
-        margin-right: 10px!important;
+        margin-right: 3px!important;
         background: none;
         border: 1px solid transparent;
         padding: 7px 24px;
@@ -34,16 +34,17 @@
         background-color: $color-white-a ;
         border: 1px solid $color-gray-a;
         border-bottom: 1px solid $color-white-a ;
-        .ant-tabs-tab-btn {
-          color: $color-red-a ;
-        }
+        .ant-tabs-tab-btn { color: $color-red-a }
       }
       .ant-tabs-tab-btn {
         color: $color-blue-a ;
         font-size: $font-size-a;
         font-family: $font-family-a;
       }
-
+      .ant-tabs-tabpane {
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 }

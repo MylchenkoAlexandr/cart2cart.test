@@ -1,7 +1,32 @@
 .SignIn {
+  @include setFlex(column, flex-start, center );
   border: 1px solid $color-gray-a;
   border-top: none ;
   background-color: $color-white-a;
   padding: 1em ;
   margin-bottom: 1em ;
+  width: 100% ;
+  &> .wrapper {
+    max-width: 54em;
+    width: 100% ;
+    &> div {
+      display: flex;
+      flex-direction: column;
+      width: calc(100% / 2);
+      padding-top: 2.3em;
+      p { font-size: 14px ; margin: 0 }
+    }
+    &> div:first-child {
+      .ant-checkbox-wrapper {
+        padding-top: 2em;
+        font-size: $font-size-a ;
+      }
+      &> .Button {
+        @include buttonStyleA( $color-white-a, $color-green-a, $color-green-a, $color-white-a, $color-green-b, $color-green-b ) ;
+        align-self: center;
+        justify-self: center;
+        text-transform: uppercase;
+      }
+    }
+  }
 }
