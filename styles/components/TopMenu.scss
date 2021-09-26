@@ -1,0 +1,39 @@
+$border-devider-color: #D5D5D5 ;
+
+.TopMenu {
+  background-color: $color-white-b;
+  border-bottom: 1px solid $border-devider-color ;
+  &> .wrapper {
+    @include setFlex(row, flex-end, center);
+    padding: 10px 0;
+  }
+  .menu-items {
+    @include setFlex(row, flex-end, center);
+    &> li {
+      a {
+        font-size: 14px ;
+        padding: 10px 5px 15px;
+        color: $color-gray-b;
+      }
+      &:after {
+        content: "";
+        border-right: 1px solid $border-devider-color;
+        height: 100%;
+      }
+      &:nth-last-child(1):after,
+      &:nth-last-child(2):after {
+        content: "";
+        border: none;
+      }
+    }
+
+    .icon-wallet {
+      display: inline-block;
+      width: 40px;
+      height: 17px;
+      background-repeat: no-repeat;
+      background-image: url(/static/images/icon-wallet.png);
+      text-align: right;
+    }
+  }
+}

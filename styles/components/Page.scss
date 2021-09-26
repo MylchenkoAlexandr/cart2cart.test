@@ -1,4 +1,4 @@
-.SignPage {
+.Page {
   @include setFlex(column, flex-start, center );
   width: 100vw;
   height: 100vh;
@@ -7,5 +7,5 @@
     @include setFlex(column, flex-start, center );
     width: 100% ;
   }
-  &> .content {flex: 1 }
+  &> .content {flex: 1}
 }

@@ -22,14 +22,16 @@
         padding-top: 2em;
         font-size: $font-size-a ;
         margin-bottom: 1.6em;
+        &> span:last-child {font-weight: 500}
       }
       &> .Button {
-        @include buttonStyleA( $color-white-a, $color-green-a, $color-green-a, $color-white-a, $color-green-b, $color-green-b, 14px ) ;
+        @include buttonStyleA( $color-white-a, $color-green-a, $color-green-a, $color-white-a, $color-green-b, $color-green-b, 15px ) ;
         align-self: center;
         justify-self: center;
         text-transform: uppercase;
         padding: 8px 29px !important;
         margin-bottom: 1em;
+        font-weight: 500;
       }
     }
     &> div:last-child {

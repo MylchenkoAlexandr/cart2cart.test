@@ -1,10 +1,10 @@
 .HomeFooter {
   background-color: $color-blue-dark-a;
-  & > .wrapper {
+  &> .wrapper {
     padding-top: 36px;
     margin-bottom: 24px;
     flex-wrap: nowrap;
-    & > .column {
+    &> .column {
       @include setFlex(column, flex-start, flex-start);
       width: calc(100% / 4);
       overflow: hidden;
@@ -53,7 +53,7 @@
       }
       .phone-line > p {
         line-height: 38px;
-        margin-bottom: -6px;
+        margin-bottom: -7px;
       }
       .phone { font-size: 1.6em }
       .mail { font-size: 0.875em }
@@ -63,9 +63,9 @@
 
 @include setScreenWidth(800px) {
   .HomeFooter {
-    & > .wrapper {
+    &> .wrapper {
       flex-wrap: wrap;
-      & > .column {
+      &> .column {
         width: calc(100% / 2) ;
         &:nth-child(3),
         &:nth-child(4) { padding-top: 36px }
@@ -85,8 +85,8 @@
 
 @include setScreenWidth(438px) {
   .HomeFooter {
-    & > .wrapper {
-      & > .column {
+    &> .wrapper {
+      &> .column {
         width: 100%;
         &:nth-child(3),
         &:nth-child(4) { padding-top: 0 }

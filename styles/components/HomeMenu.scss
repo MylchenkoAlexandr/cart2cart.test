@@ -1,38 +1,11 @@
 .HomeMenu {
-  @include setFlex(row, center, center);
-  background-color: $color-blue-a;
-  & > .wrapper {
-    justify-content: space-between;
-    height: 80px;
-    & > div {
-      @include setFlex(row, center, center);
-      height: 100%;
-      & > a {
-        @include setFlex(row, center, center);
-        @include disableLineBreaks() ;
-        font-family: $font-family-c;
-        color: $color-white-a;
-        height: 100%;
-        line-height: 26px;
-        font-weight: 400;
-        font-size: 1.05em;
-        padding: 0 10px;
-      }
-    }
-    & > .left {
-      & > a:hover {background-color: $color-blue-light-a}
-      .IconHome {
-        width: 1.3em;
-        margin: 0 1em;
-        fill: $color-white-a ;
-      }
-    }
-    & > .right {
-      padding-right: 25px;
-      .Button {
-        @include buttonStyleA($color-white-a, transparent, $color-white-a, $color-blue-a, $color-white-a, $color-white-a, 1.035em) ;
-        font-family: $font-family-c;
-      }
-    }
+  .IconHome {
+    width: 1.3em;
+    margin: 0 1em;
+    fill: $color-white-a ;
+  }
+  .Button {
+    @include buttonStyleA($color-white-a, transparent, $color-white-a, $color-blue-a, $color-white-a, $color-white-a, 1.035em) ;
+    font-family: $font-family-c;
   }
 }

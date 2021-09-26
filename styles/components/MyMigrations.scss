@@ -1,0 +1,145 @@
+.MyMigrations {
+  &> .wrapper {
+    @include setFlex(column, flex-start, flex-start);
+    min-height: 500px;
+    .header {
+      @include setFlex(row, space-between, center);
+      padding-top: 1.8em;
+      margin-bottom: .5em ;
+      width: 100% ;
+      &> * { display: flex }
+      .Button.create-migration {
+        @include buttonStyleA( $color-blue-a, $color-white-a, $color-blue-a, $color-white-a, $color-blue-a, $color-blue-a, 15px ) ;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding: 7px 24px 6px 24px;
+        margin-bottom: 8px;
+      }
+    }
+    .MyMigrationsGrid {
+      width: 100% ;
+      margin-bottom: 1.5em;
+      .grid-headers {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        padding: 8px 0;
+        &> [data-cell-header] {text-transform: capitalize}
+      }
+      .grid-dataset {
+        margin-top: 2.3em;
+        padding-bottom: .9em;
+        border-bottom: 1px solid #ddd;
+        [data-cell="name"] {
+          &> .status {
+            @include setFlex(row,flex-start,center);
+            margin-bottom: 1.4em;
+            &> * {
+              display: flex;
+              margin-right: 10px;
+              font-size: 18px
+            }
+            &> [data-field="id"] { font-weight: 500 }
+            &> [data-field="status"] { text-transform: uppercase }
+            &> .anticon {
+              color: $color-green-a ;
+              font-size: 25px;
+            }
+          }
+          &> .direction {
+            @include setFlex(row,space-between,center);
+            width: 77.5%;
+            margin-bottom: 1em;
+            &> * {
+              display: flex;
+              margin-right: 10px;
+              font-size: 18px
+            }
+            &> img { width: 150px }
+            &> .anticon {
+              color: #cdcdcd ;
+              font-size: 24px;
+            }
+          }
+          &> .details {
+            @include setFlex(row,flex-start,center);
+            &> a {
+              display: flex;
+              align-items: center;
+              font-size: 14px ;
+              text-decoration: none;
+              color: $color-gray-b ;
+              margin-right: 1em;
+            }
+            .sprite {
+              display: inline-block;
+              width: 27px;
+              height: 27px;
+              background-repeat: no-repeat;
+              margin-right: .5em ;
+              &.icon-details {background-image: url(/static/images/icon-show-details.png)}
+              &.icon-migration-log {background-image: url(/static/images/icon-migration-log.png)}
+            }
+          }
+        }
+        [data-cell="date"] {
+          &> .updates {
+            @include setFlex(column,flex-start,flex-start);
+            margin-top: 3.2em ;
+            &> p {
+              display: flex;
+              align-items: center;
+              font-size: 14px ;
+              text-decoration: none;
+              color: $color-gray-b ;
+              margin-right: 1em;
+              margin-bottom: 2px;
+            }
+            .sprite {
+              display: inline-block;
+              width: 19px;
+              height: 19px;
+              background-repeat: no-repeat;
+              margin-right: .5em ;
+              &.icon-created {background-image: url(/static/images/icon-date-created.png)}
+              &.icon-modified {background-image: url(/static/images/icon-date-modified.png)}
+            }
+          }
+        }
+        [data-cell="available actions"] {
+          &> .actions {
+            @include setFlex(column,flex-start,center);
+            margin-top: 3.2em ;
+            .Button {
+              text-transform: uppercase;
+              font-weight: 500;
+              padding: 7px 24px 6px 24px;
+              margin-bottom: 8px;
+              width: 225px ;
+            }
+            .Button.continue-migration {
+              @include buttonStyleA( $color-white-a, $color-green-a, $color-green-a, $color-white-a, $color-green-b, $color-green-b, 15px ) ;
+            }
+            .Button.edit-migration {
+              @include buttonStyleA( $color-white-a, #0187c6, #0187c6, $color-white-a, #017cc6, #017cc6, 15px ) ;
+            }
+          }
+        }
+      }
+    }
+    .paginator {
+      @include setFlex(row, center, center);
+      width: 100% ;
+      margin: 1em 0;
+      .count {
+        margin: 0 25px;
+      }
+      [data-active-page] {
+        background: $color-blue-a ;
+        color: $color-white-a ;
+        pointer-events: none;
+        padding: 4px 6px;
+        border-radius: 2px;
+      }
+    }
+  }
+}

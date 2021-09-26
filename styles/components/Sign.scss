@@ -7,8 +7,6 @@
     @include setFlex(column, flex-start, center );
     height: 100% ;
     h1 {
-      text-transform: uppercase;
-      font-size: 24px;
       padding-top: .9em ;
       margin: 0 ;
       margin-bottom: .6em;
@@ -38,7 +36,10 @@
         background-color: $color-white-a ;
         border: 1px solid $color-gray-a;
         border-bottom: 1px solid $color-white-a ;
-        .ant-tabs-tab-btn { color: $color-red-a }
+        .ant-tabs-tab-btn {
+          color: $color-red-a;
+          font-weight: 500;
+        }
       }
       .ant-tabs-tab-btn {
         color: $color-blue-a ;
@@ -55,7 +56,7 @@
 
 @include setScreenWidth(640px) {
   .Sign {
-    & > .wrapper {
+    &> .wrapper {
       width: 100% ;
     }
   }
