@@ -92,7 +92,7 @@
               text-decoration: none;
               color: $color-gray-b ;
               margin-right: 1em;
-              margin-bottom: 2px;
+              margin-bottom: 3px;
             }
             .sprite {
               display: inline-block;
@@ -130,9 +130,8 @@
       @include setFlex(row, center, center);
       width: 100% ;
       margin: 1em 0;
-      .count {
-        margin: 0 25px;
-      }
+      padding-bottom: 1.5em ;
+      .count {margin: 0 25px}
       [data-active-page] {
         background: $color-blue-a ;
         color: $color-white-a ;

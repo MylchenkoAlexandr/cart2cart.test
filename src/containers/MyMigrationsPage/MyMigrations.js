@@ -26,9 +26,7 @@ const MyMigrationsDatasetItem = {
     "available actions": [ "continue", "edit" ]
 }
 const MyMigrationsDataset = [
-    MyMigrationsDatasetItem,
-    //  MyMigrationsDatasetItem,
-    //  MyMigrationsDatasetItem
+    MyMigrationsDatasetItem
 ] ;
 
 export default function MyMigrationsPage() {
