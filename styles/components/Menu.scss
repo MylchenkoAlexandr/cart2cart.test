@@ -1,0 +1,26 @@
+.Menu {
+  @include setFlex(row, center, center);
+  background-color: $color-blue-a;
+  &> .wrapper {
+    justify-content: space-between;
+    height: 80px;
+    &> div {
+      @include setFlex(row, center, center);
+      height: 100%;
+      &> a {
+        @include setFlex(row, center, center);
+        @include disableLineBreaks() ;
+        font-family: $font-family-c;
+        color: $color-white-a;
+        height: 100%;
+        line-height: 26px;
+        font-weight: 400;
+        font-size: 1.05em;
+        padding: 0 10px;
+        &[data-selected="true"] {background-color: $color-blue-light-a}
+      }
+    }
+    &> .left > a:hover { background-color: $color-blue-light-a }
+    &> .right { padding-right: 25px }
+  }
+}
