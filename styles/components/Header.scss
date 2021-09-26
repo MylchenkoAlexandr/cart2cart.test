@@ -42,9 +42,7 @@
 @include setScreenWidth(600px) {
   .Header {
     &> .wrapper {
-      &> .contacts {
-        display: none;
-      }
+      &> .contacts {display: none}
     }
   }
 }

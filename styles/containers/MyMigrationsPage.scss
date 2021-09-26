@@ -1,0 +1,11 @@
+.MyMigrationsPage {
+  @include setFlex(column, flex-start, center );
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden auto;
+  &> div {
+    @include setFlex(column, flex-start, center );
+    width: 100% ;
+  }
+  &> .content {flex: 1 }
+}

@@ -1,7 +1,10 @@
 .Sign {
   @include setFlex(column, center, center );
+  min-height: 500px;
+  height: 100% ;
+  background-color: $color-white-b ;
   &> .wrapper {
-    @include setFlex(column, center, center );
+    @include setFlex(column, flex-start, center );
     height: 100% ;
     h1 {
       text-transform: uppercase;

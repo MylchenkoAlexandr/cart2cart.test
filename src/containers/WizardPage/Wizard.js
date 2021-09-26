@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Wizard( props ) {
+export default function Wizard() {
     return (
-        <div className="Wizard">
+        <div className="WizardPage">
             Wizard
         </div>
     );
