@@ -9,10 +9,10 @@ export default function Application() {
                 <Link to={ `/${ Pages.SIGN }` }>Sign</Link>
             </li>
             <li>
-                <Link to={ `/${ Pages.WIZARD }` }>Wizard</Link>
+                <Link to={ `/${ Pages.MY_MIGRATIONS }` }>My Migrations</Link>
             </li>
             <li>
-                <Link to={ `/${ Pages.MY_MIGRATIONS }` }>My Migrations</Link>
+                <Link to={ `/${ Pages.WIZARD }` }>Wizard</Link>
             </li>
         </ul>
     );
