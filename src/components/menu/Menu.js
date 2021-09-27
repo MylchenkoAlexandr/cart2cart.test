@@ -3,6 +3,7 @@ import Section from "../section";
 import {chain} from "lodash";
 import classnames from "classnames";
 import {MenuItemsPositions} from "../../models/constants/menu";
+import {MenuOutlined} from "@ant-design/icons";
 
 const bootstrap = (items, position) => {
     const createItems = ({title = "", url = "", selected = false }, key) => (
@@ -20,9 +21,11 @@ const bootstrap = (items, position) => {
 export default function Menu({items = [], className="" }) {
     const left = bootstrap(items, MenuItemsPositions.Left);
     const right = bootstrap(items, MenuItemsPositions.Right);
-
     return (
         <Section className={classnames( "Menu", className )}>
+            <div className="mobile">
+                <MenuOutlined />
+            </div>
             {left}
             {right}
         </Section>

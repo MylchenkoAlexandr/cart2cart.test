@@ -1,11 +1,17 @@
-$border-devider-color: #D5D5D5 ;
+$border-divider-color: #d5d5d5 ;
 
 .TopMenu {
   background-color: $color-white-b;
-  border-bottom: 1px solid $border-devider-color ;
+  border-bottom: 1px solid $border-divider-color ;
   &> .wrapper {
     @include setFlex(row, flex-end, center);
     padding: 10px 0;
+    &> .mobile {
+      display: none ;
+      cursor: pointer;
+      font-size: 25px ;
+      color: $color-gray-b;
+    }
   }
   .menu-items {
     @include setFlex(row, flex-end, center);
@@ -17,7 +23,7 @@ $border-devider-color: #D5D5D5 ;
       }
       &:after {
         content: "";
-        border-right: 1px solid $border-devider-color;
+        border-right: 1px solid $border-divider-color;
         height: 100%;
       }
       &:nth-last-child(1):after,
@@ -26,7 +32,6 @@ $border-devider-color: #D5D5D5 ;
         border: none;
       }
     }
-
     .icon-wallet {
       display: inline-block;
       width: 40px;
@@ -34,6 +39,15 @@ $border-devider-color: #D5D5D5 ;
       background-repeat: no-repeat;
       background-image: url(/static/images/icon-wallet.png);
       text-align: right;
+    }
+  }
+}
+
+@include setScreenWidth(555px) {
+  .TopMenu {
+    &> .wrapper {
+      &> .mobile { display: flex }
+      &> .menu-items { display: none }
     }
   }
 }

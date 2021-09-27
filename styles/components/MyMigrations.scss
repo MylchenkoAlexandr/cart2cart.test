@@ -29,6 +29,7 @@
         margin-top: 2.3em;
         padding-bottom: .9em;
         border-bottom: 1px solid #ddd;
+        [data-cell] { overflow: hidden}
         [data-cell="name"] {
           &> .status {
             @include setFlex(row,flex-start,center);
@@ -54,10 +55,11 @@
               margin-right: 10px;
               font-size: 18px
             }
-            &> img { width: 150px }
+            &> img { width: 150px; margin: 0}
             &> .anticon {
               color: #cdcdcd ;
               font-size: 24px;
+              margin: 0;
             }
           }
           &> .details {
@@ -138,6 +140,159 @@
         pointer-events: none;
         padding: 4px 6px;
         border-radius: 2px;
+      }
+    }
+  }
+}
+
+@include setScreenWidth(950px) {
+  .MyMigrations {
+    &> .wrapper {
+      .MyMigrationsGrid {
+        .grid-dataset {
+          [data-cell="name"] {
+            &> .direction {
+              @include setFlex(column,flex-start,flex-start);
+              width: 100%;
+              margin-bottom: 1em;
+              &> .anticon {
+                margin-left: 2.7em;
+                transform: rotate(90deg);
+              }
+            }
+            &> .details {
+              @include setFlex(row,flex-start,flex-start);
+            }
+          }
+          [data-cell="available actions"] {
+            &> .actions {
+              .Button {width: 100%}
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include setScreenWidth(870px) {
+  .MyMigrations {
+    &> .wrapper {
+      .MyMigrationsGrid {
+        .grid-headers {display: none}
+        .ant-col,
+        .ant-row {flex-direction: column}
+        .ant-col {
+          display: flex;
+          width: 100% ;
+          max-width: unset;
+        }
+        .grid-dataset {
+          [data-cell] { overflow: hidden}
+          [data-cell="name"] {
+            &> .direction {
+              @include setFlex(row,space-between,center);
+              width: 50%;
+              &> img { width: 150px }
+              &> .anticon {
+                margin: unset;
+                transform: none;
+              }
+            }
+            &> .details {
+              @include setFlex(row,flex-start,center);
+              &> a {
+                margin-right: 1em;
+                &:last-child { margin-left: 1.6em }
+              }
+            }
+          }
+          [data-cell="date"] {
+            &> .updates {
+              @include setFlex(row,flex-start,center);
+              margin-top: .5em ;
+              p:first-child { margin-left: .15em }
+            }
+          }
+          [data-cell="available actions"] {
+            &> .actions {
+              @include setFlex(row,flex-start,center);
+              margin-top: .5em ;
+              width: 100% ;
+              .Button {
+                margin-right: 1em;
+                width: 210px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include setScreenWidth(500px) {
+  .MyMigrations {
+    &> .wrapper {
+      .header {
+        @include setFlex(column, flex-start, center);
+        button { order: 1; width: 100%; justify-content: center }
+        h1 { order: 2 }
+      }
+      .MyMigrationsGrid {
+        .grid-dataset {
+          [data-cell] { overflow: hidden}
+          [data-cell="name"] {
+            &> .direction {
+              @include setFlex(column,flex-start,flex-start);
+              &> .anticon {
+                margin-left: 2.7em;
+                transform: rotate(90deg);
+              }
+            }
+            &> .details {
+              @include setFlex(row,flex-start,flex-start);
+              &> a {
+                margin-right: 0;
+                width: 10em;
+                overflow: hidden;
+                &:last-child { margin: 0 }
+              }
+              .sprite {
+                min-width: 30px;
+                max-width: 30px;
+                width: 30px;
+                margin-right: 0 ;
+              }
+            }
+          }
+          [data-cell="date"] {
+            &> .updates {
+              @include setFlex(row,flex-start,center);
+              margin-top: .5em ;
+              margin-left: 3px;
+              p {
+                width: 10em;
+                overflow: hidden;
+                &:first-child { margin: 0 }
+              }
+              .sprite {
+                width: 22px;
+                min-width: 22px;
+                max-width: 22px;
+              }
+            }
+          }
+          [data-cell="available actions"] {
+            &> .actions {
+              @include setFlex(column,flex-start,flex-start);
+              margin-top: .5em ;
+              width: 100% ;
+              .Button {
+                margin-right: 1em;
+                width: 210px;
+              }
+            }
+          }
+        }
       }
     }
   }

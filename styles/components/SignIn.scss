@@ -15,7 +15,11 @@
       flex-direction: column;
       width: calc(100% / 2);
       padding-top: 2.3em;
-      p { font-size: 14px ; margin: 0 }
+      p {
+        font-size: 14px ;
+        margin: 0;
+        font-weight: 500
+      }
     }
     &> div:first-child {
       .ant-checkbox-wrapper {
@@ -36,7 +40,7 @@
     }
     &> div:last-child {
       &> .social {
-        padding-top: 1.5em;
+        padding-top: 1.6em;
         padding-left: 6.3em;
         .button.swipe {
           width: 16.5em ;
@@ -55,6 +59,8 @@
 @include setScreenWidth(990px) {
   .SignIn {
     &> .wrapper {
+      &> .buttons,
+      &> .fields { padding-top: 1em }
       &> div:last-child {
         &> .social {
           padding-left: 1em;
@@ -64,7 +70,6 @@
     }
   }
 }
-
 @include setScreenWidth(640px) {
   .SignIn {
     &> .wrapper {
@@ -84,7 +89,14 @@
     }
   }
 }
-
+@include setScreenWidth(440px) {
+  .SignIn {
+    &> .wrapper {
+      &> .buttons,
+      &> .fields { padding-top: 0 }
+    }
+  }
+}
 @include setScreenWidth(335px) {
   .SignIn {
     &> .wrapper {

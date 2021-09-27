@@ -20,7 +20,23 @@
         &[data-selected="true"] {background-color: $color-blue-light-a}
       }
     }
+    &> .mobile {
+      display: none ;
+      cursor: pointer;
+      font-size: 32px;
+      color: $color-white-a;
+    }
     &> .left > a:hover { background-color: $color-blue-light-a }
     &> .right { padding-right: 25px }
+  }
+}
+
+
+@include setScreenWidth(640px) {
+  .Menu {
+    &> .wrapper {
+      &> .mobile { display: flex }
+      &> .left { display: none }
+    }
   }
 }

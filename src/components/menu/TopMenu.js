@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "../section";
 import {map} from "lodash";
+import {MenuOutlined} from "@ant-design/icons";
 
 const Items = [
     { title: "My Migrations List" },
@@ -23,6 +24,9 @@ export default function TopMenu({ items = [ ... Items ] }) {
     return (
         <Section className="TopMenu">
             { content }
+            <div className="mobile">
+                <MenuOutlined />
+            </div>
         </Section>
     );
 }
