@@ -1,0 +1,273 @@
+$wizard-color-gray: #dfdfdf ;
+.Wizard {
+  background-color: #fafafa;
+  &> .wrapper {
+    @include setFlex(column, flex-start, flex-start);
+    min-height: 500px;
+    &> * {
+      display: flex;
+      width: 100%;
+    }
+    .Button {text-transform: uppercase}
+    h1 {
+      display: inline;
+      text-align: center;
+    }
+    .steps {
+      @include setFlex(row, center, center);
+      padding-top: 1.1em;
+      margin-bottom: 1.8em;
+      &> .wrapper {
+        @include setFlex(row, center, center);
+        position: relative;
+        a {
+          @include setFlex(column, center, center);
+          overflow: hidden;
+          border-radius: 100px ;
+          width: 52px;
+          height: 52px;
+          font-size: 24px;
+          &[data-active] {
+            z-index: 5 ;
+          }
+          &[data-active]:not(:last-child) { margin-right: 70px }
+          &[data-active="true"] {
+            border: 2px solid $color-white-a;
+            background-color: $color-blue-a;
+            color: $color-white-a;
+            box-shadow: 0 0 3px #868686 ;
+          }
+          &[data-active="false"] {
+            border: 2px solid transparent;
+            background-color: $wizard-color-gray;
+            color: $color-black-a;
+          }
+          &[data-active]:last-child {
+            &> .icon-wizard {
+              width: 27px;
+              height: 27px;
+              background-repeat: no-repeat;
+              background-image: url(/static/images/icon-wizard-a.png)
+            }
+          }
+        }
+        .line {
+          position: absolute;
+          border-top: 1px solid $wizard-color-gray ;
+          width: 100% ;
+          z-index: 4;
+        }
+      }
+    }
+    .content {
+      padding-bottom: 2em ;
+      .ant-row { width: 100% }
+    }
+    .wizard-data {margin-top: .5em}
+    .source-cart-setup {
+      border: 1px solid $wizard-color-gray ;
+      background: #ceecf1;
+    }
+    .centered-header {
+      display: inline-block;
+      width: 100% ;
+      text-align: center;
+      padding: 1em 0 .3em 0;
+      margin-top: .5em;
+      h1 {
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .icon-wizard {
+        margin-left: .5em ;
+        display: inline-block;
+        width: 23px;
+        height: 18px;
+        background-repeat: no-repeat;
+        background-image: url(/static/images/icon-source-cart-setup.png)
+      }
+      &.footer {
+        border-top: 1px solid $wizard-color-gray;
+        background-color: #dce8f2;
+        padding-bottom: 1em;
+      }
+    }
+    .centered-text {
+      display: inline-block;
+      width: 100% ;
+      text-align: center;
+      margin-bottom: 1em ;
+      &> a { color: #7d7d7d }
+    }
+    .source-cart-selector {
+      @include setFlex(row, flex-start, flex-start);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      padding-bottom: 5px;
+      margin-bottom: .5em;
+      .selector-label {
+        width: 100%;
+        padding: .5em 1em ;
+        text-align: right ;
+        font-weight: 500;
+      }
+      .ant-select { width: 100% }
+    }
+    .notification-description {
+      font-size: 14px;
+      line-height: 16px;
+      margin-top: 6px;
+      color: #7d7d7d;
+      &.dark { color: $color-black-a }
+      &.centered {
+        text-align: center;
+        line-height: 24px;
+      }
+    }
+    .source-cart-steps {
+      padding: 20px 15px;
+      margin-left: 0 !important;
+    }
+    .step-info {
+      @include setFlex(column, flex-start, flex-start);
+      border: 1px solid #868686;
+      border-radius: 5px;
+      color: #4c4c4c;
+      padding: 8px;
+      position: relative ;
+      &.fixed {min-height: 150px}
+      &> p { font-size: 14px }
+      &> .Button {
+        @include buttonStyleA( $color-white-a, #59cbf4, #a5a5a5, $color-white-a, #2ab6e8, #a5a5a5, 14px ) ;
+        margin-top: 1em ;
+        font-weight: 500;
+        align-self: center;
+        padding: 9px 17px 7px 24px;
+      }
+      &> .anticon.anticon-caret-right {
+        font-size: 42px ;
+        position: absolute;
+        right: -35px;
+        top: 33%;
+        color: #c4c4c4 ;
+      }
+    }
+    .upload-it-automatically {
+      font-size: 14px ;
+      text-decoration: underline ;
+    }
+    .target-card-setup {
+      border-left: 1px solid $wizard-color-gray;
+      border-right: 1px solid $wizard-color-gray;
+      .source-cart-selector:last-child,
+      .source-cart-selector:first-child { border-bottom: none }
+      .source-cart-selector:last-child {
+        margin-bottom: 1em ;
+      }
+      &:last-child {
+        border-bottom: 1px solid $wizard-color-gray;
+      }
+    }
+    .migration-using {
+      width: 100%;
+      font-size: 16px;
+      text-align: right ;
+      font-weight: 500;
+    }
+    .next-step {
+      @include setFlex(row, center, center);
+      width: 100% ;
+      &> p {
+        font-style: italic;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #838e96;
+        padding-right: .5em;
+      }
+      &> .Button {
+        @include buttonStyleA( $color-white-a, $color-green-a, $color-green-a, $color-white-a, $color-green-b, $color-green-b, 16px ) ;
+        font-weight: 500;
+        padding: 14px 49px;
+      }
+    }
+
+    .chat {
+      margin-top: .5em;
+      padding: 0 10px !important;
+      .cover {
+        border: 1px solid $wizard-color-gray;
+        border-bottom: none ;
+        padding-left: .5em ;
+        background-color: #f8f8f8;
+        .live-chat {
+          @include setFlex(row, flex-start, flex-start);
+          width: 100%;
+          padding-top: 10px;
+          text-align: center;
+
+          &> .photo-wizard {
+            width: 110px;
+            min-width: 110px;
+            max-width: 110px;
+            height: 110px;
+            min-height: 110px;
+            max-height: 110px;
+            background: url(/static/images/photo-wizard.jpg) no-repeat 50% 50% transparent;
+            border-radius: 100%;
+            border: 1px solid #e3e3e3;
+            vertical-align: top;
+          }
+          &> .live-chat-context {
+            flex: 1;
+            text-align: center;
+            margin: 10px 0;
+            &> .live-chat-title {
+              color: #57bafd;
+              font-size: 18px;
+              text-transform: uppercase;
+              margin-bottom: -3px;
+            }
+            &> .need-help {
+              font-size: 18px;
+              font-style: italic;
+              color: #a5a5a5;
+              margin-bottom: .5em;
+            }
+            &> .Button {
+              @include buttonStyleA( #758140, #cde55b, rgba($color-black-a, 0.1), #758140, #c6de55, rgba($color-black-a, 0.1), 14px ) ;
+              padding: 6px 28px;
+            }
+          }
+        }
+      }
+      .notice {
+        border: 1px solid $wizard-color-gray;
+        border-top: none;
+        border-bottom: none;
+        padding: 20px 10px 10px 20px;
+        font-size: 12px;
+      }
+      .arrows {
+        @include setFlex(row, center, center );
+        padding: 10px 0 15px 0 ;
+        border: 1px solid $wizard-color-gray;
+        border-top: none;
+        .arrow {
+          display: inline-block;
+          cursor: pointer ;
+          width: 11px;
+          height: 17px;
+          background-repeat: no-repeat;
+          &[data-type]:first-child { padding-right: 2em}
+          &[data-type] {
+            opacity: .5 ;
+            &:hover { opacity: 1 }
+          }
+          &[data-type="left"] {background-image: url(/static/images/arrow-left.png)}
+          &[data-type="right"] {background-image: url(/static/images/arrow-right.png)}
+        }
+      }
+    }
+  }
+}

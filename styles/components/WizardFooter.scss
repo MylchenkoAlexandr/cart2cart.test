@@ -1,0 +1,30 @@
+$footer-text-color: #7e9bb8 ;
+.WizardFooter {
+  background-color: $color-blue-dark-a;
+  &> .wrapper {
+    justify-content: center;
+    padding-top: 36px;
+    margin-bottom: 2.5em;
+    flex-wrap: nowrap;
+
+    &> .footer-items {
+      @include setFlex(row, flex-end, center);
+      &> li {
+        a {
+          font-size: 1em ;
+          padding: 10px 11px 15px;
+          color: $footer-text-color ;
+          &:hover { color: $color-blue-a }
+        }
+        &:after {
+          content: "|";
+          color: $footer-text-color ;
+        }
+        &:nth-last-child(1):after {
+          content: "";
+          border: none;
+        }
+      }
+    }
+  }
+}

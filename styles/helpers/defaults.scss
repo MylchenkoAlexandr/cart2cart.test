@@ -17,13 +17,18 @@ p { margin: 0 ; padding: 0 }
 /** [!] fix: antd styles overrides */
 svg:not(:root) {overflow: visible!important}
 
+.ant-checkbox-inner,
+.ant-select,
 .ant-input {
   border: 1px solid $color-gray-b;
   border-radius: 3px;
 }
-
+.ant-select-selector {
+  border: none !important;
+}
 h1 {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 300;
 }
+b { font-weight: 500 }

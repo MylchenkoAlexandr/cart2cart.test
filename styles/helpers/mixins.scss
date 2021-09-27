@@ -26,7 +26,8 @@
   outline: 1px dashed red !important;
 }
 @mixin buttonStyleA( $color, $background, $border, $colorHover, $backgroundHover, $borderHover, $fontSize: $font-size-a ) {
-  padding: 7px 24px 9px 24px ;
+  @include disableLineBreaks() ;
+  padding: 9px 24px 7px 24px ;
   color: $color;
   font-size: $fontSize;
   background-color: $background;

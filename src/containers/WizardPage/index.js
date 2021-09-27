@@ -1,3 +1,3 @@
-import Wizard from "./Wizard";
+import WizardPage from "./WizardPage";
 
-export default Wizard ;
+export default WizardPage ;

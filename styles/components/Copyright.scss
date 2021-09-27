@@ -8,7 +8,13 @@
     small {font-size: 76%}
     small, a {color: #556f88}
     small { width: calc(100% / 4)}
-    small:last-child {font-size: 66%}
+    small:last-child {
+      font-size: 66%;
+      a:hover {
+        color: #7e9bb8;
+        border-bottom: 1px solid #7e9bb8;
+      }
+    }
   }
 }
 
