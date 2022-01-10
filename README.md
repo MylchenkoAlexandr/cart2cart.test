@@ -1,5 +1,7 @@
 # CART2CART
 
+See task info `/.task/*`
+
 ### INSTALLATION
 Use `yarn` package manager:  
 >`yarn install`
